@@ -1,0 +1,54 @@
+@import './Sider/sider.less';
+@import './Header/header.less';
+@import './Footer/footer.less';
+@menuWidth: 260px;
+@headerHeight: 60px;
+@contentHeight: calc(100vh - @headerHeight);
+@pagePrimaryColor: #f0f2f5;
+
+.page-layout{
+  position: relative;
+  &-header{
+    width: 100vw;
+    background-color: #fff;
+    position: fixed;
+    height: @headerHeight;
+    z-index: 998;
+    line-height: @headerHeight;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, .1);
+    // vertical-align: middle;
+  }
+  &-sider{
+    background-color: #fff;
+    height: @contentHeight;
+    position: fixed;
+    top: @headerHeight;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: @menuWidth!important; // antd 默认带个style宽度，需要覆盖
+    max-width: @menuWidth!important;
+    // 谷歌浏览器
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    // 火狐浏览器
+    scrollbar-width: none;
+    padding-left: 40px;
+    padding-top: 16px;
+    padding-bottom: 40px;
+  }
+  &-main{
+    margin-top: @headerHeight;
+    margin-left: @menuWidth;
+    min-height: @contentHeight;
+    position: relative;
+    &-content{
+      padding: 10px;
+      // background-color: #fff;
+    }
+    &-footer{
+      text-align: center;
+      padding: 15px 50px;
+    }
+  }
+}
