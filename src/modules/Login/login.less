@@ -1,0 +1,22 @@
+.page-login{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  &-form{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    user-select: none;
+  }
+  &-bg{
+    z-index: 0;
+    position: fixed;
+    bottom: -8px;
+    left: 0;
+    width: 100vw;
+    filter: drop-shadow(0 4px 8px var(--shadow-20)) opacity(0.6);
+  }
+}

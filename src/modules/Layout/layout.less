@@ -1,10 +1,13 @@
+@import '~antd/dist/antd.less';
 @import './Sider/sider.less';
 @import './Header/header.less';
 @import './Footer/footer.less';
+@import '~@/components/Common/common.less';
 @menuWidth: 260px;
-@headerHeight: 60px;
+@headerHeight: 64px;
 @contentHeight: calc(100vh - @headerHeight);
-@pagePrimaryColor: #f0f2f5;
+@pageBgPrimaryColor: #f0f2f5;
+@pagePrimaryColor: #1890ff;
 
 .page-layout{
   position: relative;
@@ -15,7 +18,7 @@
     height: @headerHeight;
     z-index: 998;
     line-height: @headerHeight;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, .1);
     // vertical-align: middle;
   }
   &-sider{
@@ -33,7 +36,7 @@
     }
     // 火狐浏览器
     scrollbar-width: none;
-    padding-left: 40px;
+    // padding-left: 40px;
     padding-top: 16px;
     padding-bottom: 40px;
   }

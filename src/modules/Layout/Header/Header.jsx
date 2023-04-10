@@ -14,8 +14,8 @@ const Header = (props) => {
 
   return (
     <div className="page-header">
-      <div style={{display: 'flex'}}>
-        <div data-aspm-expo="true" data-aspm="ca26615" style={{width: '210px'}}>
+      <div className="page-header-left">
+        <div data-aspm-expo="true" data-aspm="ca26615" className="page-header-left-logo">
           <a data-aspm-expo="true" data-aspm-click="ca26615.da12243" href="https://b.alipay.com/page/home">
             <img
               src="https://gw.alipayobjects.com/mdn/rms_50301b/afts/img/A*xx7OR4Uc9HsAAAAAAAAAAAAAARQnAQ" 
